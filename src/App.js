@@ -24,10 +24,15 @@ function App() {
     },
   ];
 
+  const addExpenseHanler = (expense) => {
+    console.log('in App.js');
+    console.log(expense);
+  }
+
   return (
     <div>
       <h2>Let's get started!</h2>
-      <NewExpense></NewExpense>
+      <NewExpense onAddExpense={addExpenseHanler} />
       <Expenses expenses={expenses} />
     </div>
   );
